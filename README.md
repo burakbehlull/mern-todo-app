@@ -1,0 +1,4 @@
+# Mern Todo App
+
+# MONGODB + EXPRESS + REACT + NODE
+# TYPESCRİPT
