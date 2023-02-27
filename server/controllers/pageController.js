@@ -9,3 +9,9 @@ exports.getTodos = async (req,res)=>{
         res.status(404).json(err)
     }
 }
+
+
+exports.createTodo = async(req,res)=>{
+    await Todo.create(req.body);
+    res.redirect('http://localhost:3000') //REACT LOCALHOST LİNK
+}
