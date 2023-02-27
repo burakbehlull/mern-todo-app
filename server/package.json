@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iambuvak/mern-todo-app.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/iambuvak/mern-todo-app/issues"
+  },
+  "homepage": "https://github.com/iambuvak/mern-todo-app/#readme",
+  "author": "iambuvak <burakyabgu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.10.0",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
