@@ -10,6 +10,10 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+mongoose.connect('').then(() => {
+    console.log("Veritabanına erisim sağlandı.");
+});
+
 app.get('/', (req,res)=>{
     res.send("Im Buvak'ın sunumuyla..");
 })
