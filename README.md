@@ -1,4 +1,4 @@
-# Mern Todo App
+# MERN TODO APP
 
-# MONGODB + EXPRESS + REACT + NODE
-# TYPESCRİPT
+### MONGODB + EXPRESS + REACT TYPESCRİPT + NODE 
+### Formatting Tool: SCSS
