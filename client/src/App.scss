@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    // border: none;
+    // box-sizing: border-box;
+}
+
+body{
+    padding: 10em;
+}
+
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        .create-todo{
+            
+            //FORM > INPUT AND BUTTON  
+        }
+        .todos{
+            ul{
+                list-style-type: none;
+                text-align: center;
+            }
+        }
+    }
+}

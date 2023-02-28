@@ -6,8 +6,10 @@ import './App.scss';
 function App() {
   return (
     <div className='App'>
-      <CreateTodo />
-      <TodoList />
+      <div className='container'>
+        <CreateTodo />
+        <TodoList />
+      </div>
     </div>
   );
 }

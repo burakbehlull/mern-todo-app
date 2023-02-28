@@ -14,11 +14,11 @@ const TodoList: React.FC = ()=>{
         getTodos()
     },[])
     return (
-        <>
+        <div className='todos'>
             <ul>
             {todos.map((todo, index)=>(<li key={index}>{todo.title}</li>))}
             </ul>
-        </>
+        </div>
     )
 }
 
