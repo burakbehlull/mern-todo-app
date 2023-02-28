@@ -12,7 +12,7 @@ const TodoList: React.FC = ()=>{
     },[])
     return (
         <>
-            <h1>My Todos</h1>
+            <code>{todos.map((todo, index)=>( <li><ul key={index}> {todo} </ul></li>))}</code>
         </>
     )
 }
