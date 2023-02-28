@@ -1,18 +1,23 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-
+interface TodoRegular{
+    title: string,
+    description: string
+}
 const TodoList: React.FC = ()=>{
-    const [todos, setTodos] = useState<string[]>([])
+    const [todos, setTodos] = useState<TodoRegular[]>([]);
     useEffect(()=>{
         const getTodos = async()=>{
-            const Todos = await axios.get('http://localhost:80/getTodos')
-           setTodos(Todos.data)
+            const getsTodo = await axios.get('http://localhost:80/getTodos')
+           setTodos(getsTodo.data)
         }
         getTodos()
     },[])
     return (
         <>
-            <code>{todos.map((todo, index)=>( <li><ul key={index}> {todo} </ul></li>))}</code>
+            <ul>
+            {todos.map((todo, index)=>(<li key={index}>{todo.title}</li>))}
+            </ul>
         </>
     )
 }

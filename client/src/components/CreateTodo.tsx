@@ -7,7 +7,7 @@ const CreateTodo: React.FC = ()=>{
     }
     return (
         <>
-            <form action='http://localhost:80/createTodo' method='post'>
+            <form action="http://localhost:80/createTodo" method="post">
                 <input type="text" name="title" value={form.title} onChange={onChange} />
                 <input type="text" name="description" value={form.description} onChange={onChange} />
                 <button type="submit">Ekle</button>
