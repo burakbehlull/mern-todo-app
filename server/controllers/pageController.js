@@ -20,7 +20,7 @@ exports.createTodo = async(req,res)=>{
 
 exports.deleteTodo = async(req,res)=>{
     try{
-        await Todo.findOneAndRemove(req.body.title); //BASLIĞA GÖRE SİL DEDİK
+        await Todo.findOneAndRemove(req.body); //BASLIĞA GÖRE SİL DEDİK
         res.status(200).redirect('http://localhost:3000')
     } catch(err){
         res.status(404).json({

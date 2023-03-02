@@ -16,7 +16,7 @@ const TodoList: React.FC = ()=>{
     return (
         <div className='todos'>
             <ul>
-            {todos.map((todo, index)=>(<><li key={index}>{todo.title}</li> <form action='http://localhost:80/deleteTodo' method='post'><input type="hidden" name={todo.title} /><button>Delete</button></form></>))}
+            {todos.map((todo, index)=>(<><li key={index}>{todo.title}</li> <form action="http://localhost:80/deleteTodo" method='post'><input type="hidden" name='title' value={todo.title} /><button type='submit'>Sil</button></form></>))}
             </ul>
         </div>
     )
