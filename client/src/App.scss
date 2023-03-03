@@ -15,6 +15,10 @@ body{
     align-items: center;
     
     .container{
+
+        ul{
+            list-style-type: none;
+        }
         
         .create-todo{
             form{
@@ -63,7 +67,22 @@ body{
                     }
     
                     form{
+                        input{
+                            outline: 0;
+                            border: 1px solid #21d0e7;
+                            color: #181a1a;
+                            border-radius: 5px;
+                            font-size: 1.1em;
+                            padding: 2px;
+                            margin-bottom: 10px;
+                            
+                            &:focus{
+                                box-shadow: 1px 0px 5px #6ca2f1;
+                                border-color: #21d0e7;
+                            }
+                        }
                         button{
+                            margin-left: 57%;
                             padding: 3px 14px;
                             background-color: #d4d4d4;
                             box-shadow: 0px 0px 3px #d4d4d4;
