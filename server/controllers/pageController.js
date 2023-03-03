@@ -29,3 +29,18 @@ exports.deleteTodo = async(req,res)=>{
         })
     }
 }
+
+exports.editTodo = async(req,res)=>{
+    try{
+        const todo = await Todo.findOne(req.body);
+        todo.title = req.body.editTitle;
+        todo.save();
+        console.log(todo)
+        res.status(200).redirect('http://localhost:3000')
+    } catch(err){
+        res.status(404).json({
+            status: "fail",
+            error: err
+        })
+    }
+}
