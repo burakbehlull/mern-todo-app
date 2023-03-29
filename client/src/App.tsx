@@ -11,7 +11,8 @@ const serverURL = 'http://localhost:80';
 
 interface TodoRegular{
   title: string,
-  description: string
+  description: string,
+  isDone: boolean
 }
 
 function App() { 
@@ -20,8 +21,8 @@ function App() {
 
   useEffect(()=>{
     const getTodos = async()=>{
-        const getsTodo = await axios.get(serverURL+'/getTodos')
-       setTodos(getsTodo.data)
+        const todosData = await axios.get(serverURL+'/getTodos')
+       setTodos(todosData.data)
     }
     getTodos()
   },[])
@@ -37,13 +38,13 @@ function App() {
           <Route exact path='/' render={props=>(
             <>
               <CreateTodo ServerUri={serverURL} />
-              <TodoList ServerUri={serverURL} Todos={todos} />
+              <TodoList ServerUri={serverURL} Todos={todos}/>
             </>
           )}/>
           <Route path='/edit' render={props=>(
             
             <>
-              <EditTodo {...props} ServerUri={serverURL} Todos={todos}  />
+              <EditTodo {...props} ServerUri={serverURL} Todos={todos} />
             </>
             )} />
           <Route component={NotFound}></Route>

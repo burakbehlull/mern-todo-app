@@ -21,9 +21,6 @@ mongoose.connect(mongodbURL).then(() => {
     console.log("Veritabanına erisim sağlandı.");
 });
 
-app.get('/', (req,res)=>{
-    res.send("Im Buvak'ın sunumuyla..");
-})
 app.use(pageRouter);
 
 const port = process.env.PORT || 80;
